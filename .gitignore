@@ -1,0 +1,39 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# TypeScript / JS build
+dist/
+*.tsbuildinfo
+
+# Prisma
+prisma/migrations/
+*.db
+*.sqlite
+*.sqlite3
+
+# Environnement Python
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environnements & config
+.env
+.DS_Store
+*.log
+
+# Docker
+*.pid
+*.seed
+docker-compose.override.yml
+
+# Visual Studio Code
+.vscode/
+
+# Systèmes
+Thumbs.db
+ehthumbs.db
+Desktop.ini

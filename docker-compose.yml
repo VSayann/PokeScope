@@ -1,0 +1,22 @@
+
+services:
+  db:
+    image: postgres:latest
+    container_name: pokemon_db
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: pokemon
+    ports:
+      - "5432:5432"
+    networks:
+      - pokemon_network
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+networks:
+  pokemon_network:
+
+volumes:
+  postgres_data:
