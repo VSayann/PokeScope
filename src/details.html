@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Pokémon</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="details-background"></div>
+    <header id="header-container"></header>
+    <div class="details-layout">
+    <main class="details-container">
+        <div class="pokemon-details">
+            <img id="pokemon-image" src="" alt="Image du Pokémon">
+            <h1 id="pokemon-name"></h1>
+            <div class="pokemon-types" id="pokemon-types"></div>
+            <div class="pokemon-stats" id="pokemon-stats"></div>
+            <div class="pokemon-advantages">
+                <h3>Dégâts x2</h3>
+                <div id="pokemon-strengths"></div>
+            </div>
+            
+            <div class="pokemon-disadvantages">
+                <h3>Dégâts x0.5</h3>
+                <div id="pokemon-weaknesses"></div>
+            </div>
+            
+            <button id="favorite-btn">⭐ Ajouter aux favoris</button>
+        </div>
+        <div id="pokemon-evolutions" class="evolution-container"></div>
+        </div>
+    </main>
+
+    <script src="../dist/scripts/details.js"></script>
+
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header-container").innerHTML = data);
+    </script>
+</body>
+</html>

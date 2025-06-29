@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoris - PokeScope</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div id="header-container"><script>
+        function includeHeader() {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-container").innerHTML = data;
+                })
+                .catch(error => console.error("Erreur lors du chargement du header:", error));
+        }
+        document.addEventListener("DOMContentLoaded", includeHeader);
+    </script></div>
+
+    <h1 div class="Title">Vos Pokémon Favoris</h1>
+    <div id="favoris-container">
+        <p>Chargement des favoris...</p>
+    </div>
+
+    <script src="../dist/scripts/favoris.js"></script>
+
+    
+</body>
+</html>

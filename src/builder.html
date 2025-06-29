@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Builder</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Pokémon Team Builder</h1>
+    </header>
+	<div id="search-filter-container">
+		<input type="text" id="search-bar" placeholder="Rechercher un Pokémon...">
+		<select id="type-filter">
+			<option value="">Tous les types</option>
+		</select>
+	</div>
+    <section id="team-container">
+        <h2>Votre Équipe</h2>
+        <div id="team"></div>
+        <div id="team-suggestions"></div>
+    </section>
+
+    <section id="pokemon-selection">
+        <h2>Choisissez vos Pokémon</h2>
+        <div id="pokemon-list"></div>
+    </section>
+	<script src="../dist/scripts/builder.js"></script>
+	<script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header-container").innerHTML = data);
+    </script>
+</body>
+</html>
